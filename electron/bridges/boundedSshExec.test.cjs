@@ -1,1 +1,374 @@
-InVzZSBzdHJpY3QiOwoKY29uc3QgdGVzdCA9IHJlcXVpcmUoIm5vZGU6dGVzdCIpOwpjb25zdCBhc3NlcnQgPSByZXF1aXJlKCJub2RlOmFzc2VydC9zdHJpY3QiKTsKY29uc3QgeyBFdmVudEVtaXR0ZXIgfSA9IHJlcXVpcmUoIm5vZGU6ZXZlbnRzIik7CmNvbnN0IHsKICBleGVjdXRlQm91bmRlZFNzaENvbW1hbmQsCiAgb3BlbkJvdW5kZWRTc2hFeGVjU3RyZWFtLAp9ID0gcmVxdWlyZSgiLi9ib3VuZGVkU3NoRXhlYy5janMiKTsKCmZ1bmN0aW9uIGNyZWF0ZVN0cmVhbSgpIHsKICBjb25zdCBzdHJlYW0gPSBuZXcgRXZlbnRFbWl0dGVyKCk7CiAgc3RyZWFtLnN0ZGVyciA9IG5ldyBFdmVudEVtaXR0ZXIoKTsKICBzdHJlYW0uY2xvc2VkID0gMDsKICBzdHJlYW0uZGVzdHJveWVkID0gMDsKICBzdHJlYW0uc2lnbmFscyA9IFtdOwogIHN0cmVhbS5zaWduYWwgPSAobmFtZSkgPT4geyBzdHJlYW0uc2lnbmFscy5wdXNoKG5hbWUpOyB9OwogIHN0cmVhbS5jbG9zZSA9ICgpID0+IHsgc3RyZWFtLmNsb3NlZCArPSAxOyB9OwogIHN0cmVhbS5kZXN0cm95ID0gKCkgPT4geyBzdHJlYW0uZGVzdHJveWVkICs9IDE7IH07CiAgcmV0dXJuIHN0cmVhbTsKfQoKZnVuY3Rpb24gdHJhY2tlZFRpbWVyQXBpKCkgewogIGNvbnN0IGFjdGl2ZSA9IG5ldyBTZXQoKTsKICByZXR1cm4gewogICAgYWN0aXZlLAogICAgc2V0VGltZW91dEZuKGNhbGxiYWNrLCBkZWxheSkgewogICAgICBsZXQgdGltZXI7CiAgICAgIHRpbWVyID0gc2V0VGltZW91dCgoKSA9PiB7CiAgICAgICAgYWN0aXZlLmRlbGV0ZSh0aW1lcik7CiAgICAgICAgY2FsbGJhY2soKTsKICAgICAgfSwgZGVsYXkpOwogICAgICBhY3RpdmUuYWRkKHRpbWVyKTsKICAgICAgcmV0dXJuIHRpbWVyOwogICAgfSwKICAgIGNsZWFyVGltZW91dEZuKHRpbWVyKSB7CiAgICAgIGNsZWFyVGltZW91dCh0aW1lcik7CiAgICAgIGFjdGl2ZS5kZWxldGUodGltZXIpOwogICAgfSwKICB9Owp9Cgp0ZXN0KCJib3VuZGVkIFNTSCBleGVjIHRpbWVzIG91dCB3aGlsZSBvcGVuaW5nIGFuZCB0ZXJtaW5hdGVzIGEgbGF0ZSBzdHJlYW0iLCBhc3luYyAoKSA9PiB7CiAgbGV0IGNhbGxiYWNrOwogIGxldCBlbmRDYWxscyA9IDA7CiAgbGV0IGRlc3Ryb3lDYWxscyA9IDA7CiAgY29uc3QgdGltZXJzID0gdHJhY2tlZFRpbWVyQXBpKCk7CiAgY29uc3Qgc3NoQ2xpZW50ID0gewogICAgZXhlYyhfY29tbWFuZCwgbmV4dCkgeyBjYWxsYmFjayA9IG5leHQ7IH0sCiAgICBlbmQoKSB7IGVuZENhbGxzICs9IDE7IH0sCiAgICBkZXN0cm95KCkgeyBkZXN0cm95Q2FsbHMgKz0gMTsgfSwKICB9OwogIGNvbnN0IHJlc3VsdCA9IGV4ZWN1dGVCb3VuZGVkU3NoQ29tbWFuZChzc2hDbGllbnQsICJ0cnVlIiwgewogICAgb3BlbmluZ1RpbWVvdXRNczogNSwKICAgIC4uLnRpbWVycywKICB9KTsKICBhc3NlcnQuZXF1YWwodGltZXJzLmFjdGl2ZS5zaXplLCAxKTsKICBhc3NlcnQuZXF1YWwoWy4uLnRpbWVycy5hY3RpdmVdWzBdLmhhc1JlZigpLCB0cnVlKTsKICBhd2FpdCBhc3NlcnQucmVqZWN0cyhyZXN1bHQsIChlcnJvcikgPT4gZXJyb3IuY29kZSA9PT0gIlNTSF9FWEVDX09QRU5fVElNRU9VVCIpOwogIGFzc2VydC5lcXVhbCh0aW1lcnMuYWN0aXZlLnNpemUsIDApOwogIGFzc2VydC5vayhlbmRDYWxscyA+IDAgfHwgZGVzdHJveUNhbGxzID4gMCwgIm9wZW4gdGltZW91dCBtdXN0IGludmFsaWRhdGUgdGhlIHBoeXNpY2FsIHRyYW5zcG9ydCIpOwoKICBjb25zdCBzdHJlYW0gPSBjcmVhdGVTdHJlYW0oKTsKICBjYWxsYmFjayhuZXcgRXJyb3IoImxhdGUgb3BlbiBmYWlsdXJlIiksIHN0cmVhbSk7CiAgYXNzZXJ0Lm9rKHN0cmVhbS5jbG9zZWQgPiAwIHx8IHN0cmVhbS5kZXN0cm95ZWQgPiAwKTsKICBhc3NlcnQuZXF1YWwodGltZXJzLmFjdGl2ZS5zaXplLCAwKTsKfSk7Cgp0ZXN0KCJiZXN0LWVmZm9ydCBTU0ggZXhlYyBvcGVuIHRpbWVvdXQgY2FuIHByZXNlcnZlIGEgc2hhcmVkIHRyYW5zcG9ydCIsIGFzeW5jICgpID0+IHsKICBsZXQgY2FsbGJhY2s7CiAgbGV0IGVuZENhbGxzID0gMDsKICBsZXQgZGVzdHJveUNhbGxzID0gMDsKICBjb25zdCBzc2hDbGllbnQgPSB7CiAgICBleGVjKF9jb21tYW5kLCBuZXh0KSB7IGNhbGxiYWNrID0gbmV4dDsgfSwKICAgIGVuZCgpIHsgZW5kQ2FsbHMgKz0gMTsgfSwKICAgIGRlc3Ryb3koKSB7IGRlc3Ryb3lDYWxscyArPSAxOyB9LAogIH07CiAgYXdhaXQgYXNzZXJ0LnJlamVjdHMoCiAgICBleGVjdXRlQm91bmRlZFNzaENvbW1hbmQoc3NoQ2xpZW50LCAidHJ1ZSIsIHsKICAgICAgb3BlbmluZ1RpbWVvdXRNczogMiwKICAgICAgaW52YWxpZGF0ZU9uT3BlblRpbWVvdXQ6IGZhbHNlLAogICAgfSksCiAgICAoZXJyb3IpID0+IGVycm9yLmNvZGUgPT09ICJTU0hfRVhFQ19PUEVOX1RJTUVPVVQiLAogICk7CiAgYXNzZXJ0LmVxdWFsKGVuZENhbGxzLCAwKTsKICBhc3NlcnQuZXF1YWwoZGVzdHJveUNhbGxzLCAwKTsKCiAgY29uc3Qgc3RyZWFtID0gY3JlYXRlU3RyZWFtKCk7CiAgY2FsbGJhY2sobnVsbCwgc3RyZWFtKTsKICBhc3NlcnQub2soc3RyZWFtLmNsb3NlZCA+IDAgfHwgc3RyZWFtLmRlc3Ryb3llZCA+IDApOwp9KTsKCnRlc3QoImJvdW5kZWQgcmF3IGV4ZWMgc3RyZWFtIHByZXNlcnZlcyBvcHRpb25zIGFuZCBpbnZhbGlkYXRlcyBhIGh1bmcgb3BlbiIsIGFzeW5jICgpID0+IHsKICBsZXQgY2FsbGJhY2s7CiAgbGV0IHJlY2VpdmVkT3B0aW9uczsKICBsZXQgaW52YWxpZGF0aW9ucyA9IDA7CiAgY29uc3QgdGltZXJzID0gdHJhY2tlZFRpbWVyQXBpKCk7CiAgY29uc3Qgc3NoQ2xpZW50ID0gewogICAgZXhlYyhfY29tbWFuZCwgb3B0aW9ucywgbmV4dCkgewogICAgICByZWNlaXZlZE9wdGlvbnMgPSBvcHRpb25zOwogICAgICBjYWxsYmFjayA9IG5leHQ7CiAgICB9LAogICAgZGVzdHJveSgpIHsgaW52YWxpZGF0aW9ucyArPSAxOyB9LAogIH07CgogIGNvbnN0IHBlbmRpbmcgPSBvcGVuQm91bmRlZFNzaEV4ZWNTdHJlYW0oCiAgICBzc2hDbGllbnQsCiAgICAic3VkbyBzZnRwLXNlcnZlciIsCiAgICB7IHB0eTogZmFsc2UgfSwKICAgIHsgb3BlbmluZ1RpbWVvdXRNczogMiwgLi4udGltZXJzIH0sCiAgKTsKICBhc3NlcnQuZXF1YWwodGltZXJzLmFjdGl2ZS5zaXplLCAxKTsKICBhc3NlcnQuZXF1YWwoWy4uLnRpbWVycy5hY3RpdmVdWzBdLmhhc1JlZigpLCB0cnVlKTsKICBhd2FpdCBhc3NlcnQucmVqZWN0cyhwZW5kaW5nLCAoZXJyb3IpID0+IGVycm9yLmNvZGUgPT09ICJTU0hfRVhFQ19PUEVOX1RJTUVPVVQiKTsKICBhc3NlcnQuZGVlcEVxdWFsKHJlY2VpdmVkT3B0aW9ucywgeyBwdHk6IGZhbHNlIH0pOwogIGFzc2VydC5lcXVhbChpbnZhbGlkYXRpb25zLCAxKTsKICBhc3NlcnQuZXF1YWwodGltZXJzLmFjdGl2ZS5zaXplLCAwKTsKCiAgY29uc3QgbGF0ZVN0cmVhbSA9IGNyZWF0ZVN0cmVhbSgpOwogIGNhbGxiYWNrKG51bGwsIGxhdGVTdHJlYW0pOwogIGFzc2VydC5vayhsYXRlU3RyZWFtLmNsb3NlZCA+IDAgfHwgbGF0ZVN0cmVhbS5kZXN0cm95ZWQgPiAwKTsKICBhc3NlcnQuZXF1YWwodGltZXJzLmFjdGl2ZS5zaXplLCAwKTsKfSk7Cgp0ZXN0KCJib3VuZGVkIFNTSCBleGVjIHRpbWVzIG91dCBhIGxpdmUgY29tbWFuZCBhbmQgcmVtb3ZlcyBkYXRhIGxpc3RlbmVycyIsIGFzeW5jICgpID0+IHsKICBjb25zdCBzdHJlYW0gPSBjcmVhdGVTdHJlYW0oKTsKICBjb25zdCB0aW1lcnMgPSB0cmFja2VkVGltZXJBcGkoKTsKICBjb25zdCBzc2hDbGllbnQgPSB7IGV4ZWMoX2NvbW1hbmQsIG5leHQpIHsgbmV4dChudWxsLCBzdHJlYW0pOyB9IH07CiAgY29uc3QgcmVzdWx0ID0gZXhlY3V0ZUJvdW5kZWRTc2hDb21tYW5kKHNzaENsaWVudCwgInNsZWVwIiwgewogICAgcnVuVGltZW91dE1zOiA1LAogICAgLi4udGltZXJzLAogIH0pOwogIGFzc2VydC5lcXVhbCh0aW1lcnMuYWN0aXZlLnNpemUsIDEpOwogIGFzc2VydC5lcXVhbChbLi4udGltZXJzLmFjdGl2ZV1bMF0uaGFzUmVmKCksIHRydWUpOwogIGF3YWl0IGFzc2VydC5yZWplY3RzKAogICAgcmVzdWx0LAogICAgKGVycm9yKSA9PiBlcnJvci5jb2RlID09PSAiU1NIX0VYRUNfUlVOX1RJTUVPVVQiLAogICk7CiAgYXNzZXJ0LmVxdWFsKHRpbWVycy5hY3RpdmUuc2l6ZSwgMCk7CiAgYXNzZXJ0LmVxdWFsKHN0cmVhbS5saXN0ZW5lckNvdW50KCJkYXRhIiksIDApOwogIGFzc2VydC5lcXVhbChzdHJlYW0uc3RkZXJyLmxpc3RlbmVyQ291bnQoImRhdGEiKSwgMCk7CiAgYXNzZXJ0Lm9rKHN0cmVhbS5jbG9zZWQgPiAwIHx8IHN0cmVhbS5kZXN0cm95ZWQgPiAwKTsKICAvLyBCZXN0LWVmZm9ydCByZW1vdGUga2lsbDogc2VydmVycyB0aGF0IGFuc3dlciAic2lnbmFsIiBjaGFubmVsIHJlcXVlc3RzCiAgLy8gc3RvcCB0aGUgYWJhbmRvbmVkIGNvbW1hbmQgaW5zdGVhZCBvZiBsZWF2aW5nIGl0IHJ1bm5pbmcgKCMzMTg3KS4KICBhc3NlcnQuZGVlcEVxdWFsKHN0cmVhbS5zaWduYWxzLCBbIktJTEwiXSk7Cn0pOwoKdGVzdCgiYm91bmRlZCBTU0ggZXhlYyBjYXBzIGNvbWJpbmVkIHN0ZG91dCBhbmQgc3RkZXJyIGFuZCB0ZXJtaW5hdGVzIHRoZSBzdHJlYW0iLCBhc3luYyAoKSA9PiB7CiAgY29uc3Qgc3RyZWFtID0gY3JlYXRlU3RyZWFtKCk7CiAgY29uc3Qgc3NoQ2xpZW50ID0geyBleGVjKF9jb21tYW5kLCBuZXh0KSB7IG5leHQobnVsbCwgc3RyZWFtKTsgfSB9OwogIGNvbnN0IHJlc3VsdCA9IGV4ZWN1dGVCb3VuZGVkU3NoQ29tbWFuZChzc2hDbGllbnQsICJmbG9vZCIsIHsgbWF4T3V0cHV0Qnl0ZXM6IDE2IH0pOwogIHN0cmVhbS5lbWl0KCJkYXRhIiwgQnVmZmVyLmFsbG9jKDEwLCA5NykpOwogIHN0cmVhbS5zdGRlcnIuZW1pdCgiZGF0YSIsIEJ1ZmZlci5hbGxvYygxMCwgOTgpKTsKICBhd2FpdCBhc3NlcnQucmVqZWN0cyhyZXN1bHQsIChlcnJvcikgPT4gZXJyb3IuY29kZSA9PT0gIlNTSF9FWEVDX09VVFBVVF9MSU1JVCIpOwogIGFzc2VydC5lcXVhbChzdHJlYW0ubGlzdGVuZXJDb3VudCgiZGF0YSIpLCAwKTsKICBhc3NlcnQuZXF1YWwoc3RyZWFtLnN0ZGVyci5saXN0ZW5lckNvdW50KCJkYXRhIiksIDApOwogIGFzc2VydC5vayhzdHJlYW0uY2xvc2VkID4gMCB8fCBzdHJlYW0uZGVzdHJveWVkID4gMCk7Cn0pOwoKdGVzdCgiYm91bmRlZCBTU0ggZXhlYyBzZXR0bGVzIG9uIHN0ZG91dCBhbmQgc3RkZXJyIHN0cmVhbSBlcnJvcnMiLCBhc3luYyAoKSA9PiB7CiAgZm9yIChjb25zdCB0YXJnZXQgb2YgWyJzdGRvdXQiLCAic3RkZXJyIl0pIHsKICAgIGNvbnN0IHN0cmVhbSA9IGNyZWF0ZVN0cmVhbSgpOwogICAgY29uc3Qgc3NoQ2xpZW50ID0geyBleGVjKF9jb21tYW5kLCBuZXh0KSB7IG5leHQobnVsbCwgc3RyZWFtKTsgfSB9OwogICAgY29uc3QgcmVzdWx0ID0gZXhlY3V0ZUJvdW5kZWRTc2hDb21tYW5kKHNzaENsaWVudCwgImZhaWwiKTsKICAgIGNvbnN0IGV4cGVjdGVkID0gbmV3IEVycm9yKGAke3RhcmdldH0gZmFpbGVkYCk7CiAgICBpZiAodGFyZ2V0ID09PSAic3Rkb3V0Iikgc3RyZWFtLmVtaXQoImVycm9yIiwgZXhwZWN0ZWQpOwogICAgZWxzZSBzdHJlYW0uc3RkZXJyLmVtaXQoImVycm9yIiwgZXhwZWN0ZWQpOwogICAgYXdhaXQgYXNzZXJ0LnJlamVjdHMocmVzdWx0LCAvZmFpbGVkLyk7CiAgICBhc3NlcnQuZXF1YWwoc3RyZWFtLmxpc3RlbmVyQ291bnQoImRhdGEiKSwgMCk7CiAgICBhc3NlcnQuZXF1YWwoc3RyZWFtLnN0ZGVyci5saXN0ZW5lckNvdW50KCJkYXRhIiksIDApOwogIH0KfSk7Cgp0ZXN0KCJib3VuZGVkIFNTSCBleGVjIGFib3J0cyBiZWZvcmUgY2FsbGJhY2sgYW5kIHRlcm1pbmF0ZXMgYSBsYXRlIHN0cmVhbSIsIGFzeW5jICgpID0+IHsKICBsZXQgY2FsbGJhY2s7CiAgbGV0IGludmFsaWRhdGlvbnMgPSAwOwogIGNvbnN0IHRpbWVycyA9IHRyYWNrZWRUaW1lckFwaSgpOwogIGNvbnN0IGNvbnRyb2xsZXIgPSBuZXcgQWJvcnRDb250cm9sbGVyKCk7CiAgY29uc3Qgc3NoQ2xpZW50ID0gewogICAgZXhlYyhfY29tbWFuZCwgbmV4dCkgeyBjYWxsYmFjayA9IG5leHQ7IH0sCiAgICBkZXN0cm95KCkgeyBpbnZhbGlkYXRpb25zICs9IDE7IH0sCiAgfTsKICBjb25zdCByZXN1bHQgPSBleGVjdXRlQm91bmRlZFNzaENvbW1hbmQoc3NoQ2xpZW50LCAicGVuZGluZyIsIHsKICAgIHNpZ25hbDogY29udHJvbGxlci5zaWduYWwsCiAgICAuLi50aW1lcnMsCiAgfSk7CiAgYXNzZXJ0LmVxdWFsKHRpbWVycy5hY3RpdmUuc2l6ZSwgMSk7CiAgYXNzZXJ0LmVxdWFsKFsuLi50aW1lcnMuYWN0aXZlXVswXS5oYXNSZWYoKSwgdHJ1ZSk7CiAgY29udHJvbGxlci5hYm9ydChuZXcgRXJyb3IoImNhbmNlbGxlZCIpKTsKICBhd2FpdCBhc3NlcnQucmVqZWN0cyhyZXN1bHQsIC9jYW5jZWxsZWQvKTsKICBhc3NlcnQuZXF1YWwoaW52YWxpZGF0aW9ucywgMSk7CiAgYXNzZXJ0LmVxdWFsKHRpbWVycy5hY3RpdmUuc2l6ZSwgMCk7CgogIGNvbnN0IHN0cmVhbSA9IGNyZWF0ZVN0cmVhbSgpOwogIGNhbGxiYWNrKG51bGwsIHN0cmVhbSk7CiAgYXNzZXJ0Lm9rKHN0cmVhbS5jbG9zZWQgPiAwIHx8IHN0cmVhbS5kZXN0cm95ZWQgPiAwKTsKICBhc3NlcnQuZXF1YWwodGltZXJzLmFjdGl2ZS5zaXplLCAwKTsKfSk7Cgp0ZXN0KCJib3VuZGVkIFNTSCBleGVjIGNhbiBhYm9ydCBhIHNoYXJlZC1jaGFubmVsIHByb2JlIHdpdGhvdXQgaW52YWxpZGF0aW5nIHRoZSB0cmFuc3BvcnQiLCBhc3luYyAoKSA9PiB7CiAgbGV0IGludmFsaWRhdGlvbnMgPSAwOwogIGNvbnN0IGNvbnRyb2xsZXIgPSBuZXcgQWJvcnRDb250cm9sbGVyKCk7CiAgY29uc3Qgc3NoQ2xpZW50ID0gewogICAgZXhlYygpIHt9LAogICAgZGVzdHJveSgpIHsgaW52YWxpZGF0aW9ucyArPSAxOyB9LAogIH07CiAgY29uc3QgcmVzdWx0ID0gZXhlY3V0ZUJvdW5kZWRTc2hDb21tYW5kKHNzaENsaWVudCwgInByb2JlIiwgewogICAgc2lnbmFsOiBjb250cm9sbGVyLnNpZ25hbCwKICAgIGludmFsaWRhdGVUcmFuc3BvcnRPbkFib3J0OiBmYWxzZSwKICB9KTsKCiAgY29udHJvbGxlci5hYm9ydChuZXcgRXJyb3IoImNhbmNlbGxlZCIpKTsKICBhd2FpdCBhc3NlcnQucmVqZWN0cyhyZXN1bHQsIC9jYW5jZWxsZWQvKTsKICBhc3NlcnQuZXF1YWwoaW52YWxpZGF0aW9ucywgMCk7Cn0pOwoKdGVzdCgiYm91bmRlZCBTU0ggZXhlYyBjbGVhcnMgaXRzIHJ1biBkZWFkbGluZSBhZnRlciBub3JtYWwgY29tcGxldGlvbiIsIGFzeW5jICgpID0+IHsKICBjb25zdCBzdHJlYW0gPSBjcmVhdGVTdHJlYW0oKTsKICBjb25zdCB0aW1lcnMgPSB0cmFja2VkVGltZXJBcGkoKTsKICBjb25zdCBzc2hDbGllbnQgPSB7IGV4ZWMoX2NvbW1hbmQsIG5leHQpIHsgbmV4dChudWxsLCBzdHJlYW0pOyB9IH07CiAgY29uc3QgcmVzdWx0ID0gZXhlY3V0ZUJvdW5kZWRTc2hDb21tYW5kKHNzaENsaWVudCwgInRydWUiLCB7CiAgICBydW5UaW1lb3V0TXM6IDFfMDAwLAogICAgLi4udGltZXJzLAogIH0pOwoKICBhc3NlcnQuZXF1YWwodGltZXJzLmFjdGl2ZS5zaXplLCAxKTsKICBhc3NlcnQuZXF1YWwoWy4uLnRpbWVycy5hY3RpdmVdWzBdLmhhc1JlZigpLCB0cnVlKTsKICBzdHJlYW0uZW1pdCgiY2xvc2UiLCAwKTsKICBhc3NlcnQuZGVlcEVxdWFsKGF3YWl0IHJlc3VsdCwgeyBzdGRvdXQ6ICIiLCBzdGRlcnI6ICIiLCBjb2RlOiAwIH0pOwogIGFzc2VydC5lcXVhbCh0aW1lcnMuYWN0aXZlLnNpemUsIDApOwp9KTsKCnRlc3QoInJlcGVhdGVkIHVucmVzcG9uc2l2ZSBleGVjIG9wZW5zIHJlbGVhc2UgY2hhbm5lbCBjYWxsYmFja3MgYW5kIGV2aWN0IHRoZSBzaGFyZWQgdHJhbnNwb3J0IiwgYXN5bmMgKCkgPT4gewogIGNvbnN0IHsKICAgIGJvcnJvd1RyYW5zcG9ydCwKICAgIGNyZWF0ZVRyYW5zcG9ydCwKICAgIGZpbmRUcmFuc3BvcnRCeUVuZHBvaW50LAogICAgZ2V0VHJhbnNwb3J0U3RhdHMsCiAgICByZXNldFNzaFRyYW5zcG9ydFJlZ2lzdHJ5Rm9yVGVzdHMsCiAgfSA9IHJlcXVpcmUoIi4vc3NoQ29ubmVjdGlvblBvb2wuY2pzIik7CiAgcmVzZXRTc2hUcmFuc3BvcnRSZWdpc3RyeUZvclRlc3RzKHsgZGVmYXVsdElkbGVUdGxNczogMCB9KTsKICBjb25zdCBlbmRwb2ludCA9IHsgaG9zdElkOiAiaG9zdC0xIiwgaG9zdG5hbWU6ICJ3ZWRnZWQuZXhhbXBsZSIsIHVzZXJuYW1lOiAicm9vdCIgfTsKICBjb25zdCBjb25uID0gbmV3IEV2ZW50RW1pdHRlcigpOwogIGNvbm4uX3NvY2sgPSB7IGRlc3Ryb3llZDogZmFsc2UgfTsKICBjb25uLnBlbmRpbmdDaGFubmVsQ2FsbGJhY2tzID0gW107CiAgY29ubi5leGVjID0gKF9jb21tYW5kLCBjYWxsYmFjaykgPT4gewogICAgaWYgKGNvbm4uX3NvY2suZGVzdHJveWVkKSB0aHJvdyBuZXcgRXJyb3IoIk5vdCBjb25uZWN0ZWQiKTsKICAgIGNvbm4ucGVuZGluZ0NoYW5uZWxDYWxsYmFja3MucHVzaChjYWxsYmFjayk7CiAgfTsKICBjb25uLmVuZCA9ICgpID0+IHt9OwogIGNvbm4uZGVzdHJveSA9ICgpID0+IHsKICAgIGlmIChjb25uLl9zb2NrLmRlc3Ryb3llZCkgcmV0dXJuOwogICAgY29ubi5fc29jay5kZXN0cm95ZWQgPSB0cnVlOwogICAgY29ubi5wZW5kaW5nQ2hhbm5lbENhbGxiYWNrcy5sZW5ndGggPSAwOwogICAgY29ubi5lbWl0KCJjbG9zZSIpOwogIH07CiAgY29uc3QgdHJhbnNwb3J0ID0gY3JlYXRlVHJhbnNwb3J0KHsgY29ubiwgZW5kcG9pbnQgfSk7CiAgYm9ycm93VHJhbnNwb3J0KHRyYW5zcG9ydCwgeyBraW5kOiAic2hlbGwiLCBob2xkZXI6IHt9IH0pOwoKICBmb3IgKGxldCBhdHRlbXB0ID0gMDsgYXR0ZW1wdCA8IDM7IGF0dGVtcHQgKz0gMSkgewogICAgYXdhaXQgYXNzZXJ0LnJlamVjdHMoCiAgICAgIGV4ZWN1dGVCb3VuZGVkU3NoQ29tbWFuZChjb25uLCAic3RhdHMiLCB7IG9wZW5pbmdUaW1lb3V0TXM6IDIgfSksCiAgICAgIC90aW1lZCBvdXR8Tm90IGNvbm5lY3RlZC8sCiAgICApOwogIH0KCiAgYXNzZXJ0LmVxdWFsKGNvbm4ucGVuZGluZ0NoYW5uZWxDYWxsYmFja3MubGVuZ3RoLCAwKTsKICBhc3NlcnQuZXF1YWwoZ2V0VHJhbnNwb3J0U3RhdHMoKS50cmFuc3BvcnRzLCAwKTsKICBhc3NlcnQuZXF1YWwoZmluZFRyYW5zcG9ydEJ5RW5kcG9pbnQoZW5kcG9pbnQpLCBudWxsKTsKCiAgY29uc3QgcmVwbGFjZW1lbnQgPSBuZXcgRXZlbnRFbWl0dGVyKCk7CiAgcmVwbGFjZW1lbnQuX3NvY2sgPSB7IGRlc3Ryb3llZDogZmFsc2UgfTsKICByZXBsYWNlbWVudC5lbmQgPSAoKSA9PiB7fTsKICBjb25zdCByZXBsYWNlbWVudFRyYW5zcG9ydCA9IGNyZWF0ZVRyYW5zcG9ydCh7IGNvbm46IHJlcGxhY2VtZW50LCBlbmRwb2ludCB9KTsKICBhc3NlcnQuZXF1YWwoZmluZFRyYW5zcG9ydEJ5RW5kcG9pbnQoZW5kcG9pbnQpLCByZXBsYWNlbWVudFRyYW5zcG9ydCwgImEgZnJlc2ggcmVjb25uZWN0IG11c3QgYmUgcmV1c2FibGUiKTsKICByZXNldFNzaFRyYW5zcG9ydFJlZ2lzdHJ5Rm9yVGVzdHMoeyBkZWZhdWx0SWRsZVR0bE1zOiAwIH0pOwp9KTsKCnRlc3QoImJvdW5kZWQgU1NIIGV4ZWMgcHJlc2VydmVzIFVURi04IHNwbGl0IGFjcm9zcyBzdHJlYW0gY2h1bmtzIiwgYXN5bmMgKCkgPT4gewogIGNvbnN0IHN0cmVhbSA9IGNyZWF0ZVN0cmVhbSgpOwogIGNvbnN0IHNzaENsaWVudCA9IHsgZXhlYyhfY29tbWFuZCwgbmV4dCkgeyBuZXh0KG51bGwsIHN0cmVhbSk7IH0gfTsKICBjb25zdCByZXN1bHQgPSBleGVjdXRlQm91bmRlZFNzaENvbW1hbmQoc3NoQ2xpZW50LCAicHJpbnRmIHVuaWNvZGUiKTsKICBjb25zdCBieXRlcyA9IEJ1ZmZlci5mcm9tKCLkvaDwn5mCIiwgInV0ZjgiKTsKICBzdHJlYW0uZW1pdCgiZGF0YSIsIGJ5dGVzLnN1YmFycmF5KDAsIDIpKTsKICBzdHJlYW0uZW1pdCgiZGF0YSIsIGJ5dGVzLnN1YmFycmF5KDIsIDUpKTsKICBzdHJlYW0uZW1pdCgiZGF0YSIsIGJ5dGVzLnN1YmFycmF5KDUpKTsKICBzdHJlYW0uZW1pdCgiY2xvc2UiLCAwKTsKCiAgYXNzZXJ0LmRlZXBFcXVhbChhd2FpdCByZXN1bHQsIHsgc3Rkb3V0OiAi5L2g8J+ZgiIsIHN0ZGVycjogIiIsIGNvZGU6IDAgfSk7Cn0pOwoKdGVzdCgiYm91bmRlZCBTU0ggZXhlYyBzZXR0bGVzIG9uIGV4aXQtc3RhdHVzIHBsdXMgRU9GIGFuZCBjbG9zZXMgdGhlIGNoYW5uZWwgaXRzZWxmIiwgYXN5bmMgKCkgPT4gewogIGNvbnN0IHN0cmVhbSA9IGNyZWF0ZVN0cmVhbSgpOwogIGNvbnN0IHRpbWVycyA9IHRyYWNrZWRUaW1lckFwaSgpOwogIGNvbnN0IHNzaENsaWVudCA9IHsgZXhlYyhfY29tbWFuZCwgbmV4dCkgeyBuZXh0KG51bGwsIHN0cmVhbSk7IH0gfTsKICBjb25zdCByZXN1bHQgPSBleGVjdXRlQm91bmRlZFNzaENvbW1hbmQoc3NoQ2xpZW50LCAicmVsYXkgZXhlYyIsIHsKICAgIHJ1blRpbWVvdXRNczogNjBfMDAwLAogICAgLi4udGltZXJzLAogIH0pOwoKICAvLyBSZWxheS1zdHlsZSBzZXJ2ZXI6IG91dHB1dCwgZXhpdC1zdGF0dXMgYW5kIEVPRiwgYnV0IHRoZSBjaGFubmVsLWNsb3NlCiAgLy8gbmV2ZXIgY29tZXMg4oCUIHRoZSBjbGllbnQgbXVzdCBoYW5nIHVwIG9uIGl0cyBvd24gKCMzNDU5KS4KICBzdHJlYW0uZW1pdCgiZGF0YSIsIEJ1ZmZlci5mcm9tKCJvdXRcbiIpKTsKICBzdHJlYW0uc3RkZXJyLmVtaXQoImRhdGEiLCBCdWZmZXIuZnJvbSgiZXJyXG4iKSk7CiAgc3RyZWFtLnN0ZGVyci5lbWl0KCJlbmQiKTsKICBzdHJlYW0uZW1pdCgiZXhpdCIsIDApOwogIHN0cmVhbS5lbWl0KCJlbmQiKTsKCiAgYXNzZXJ0LmRlZXBFcXVhbChhd2FpdCByZXN1bHQsIHsgc3Rkb3V0OiAib3V0XG4iLCBzdGRlcnI6ICJlcnJcbiIsIGNvZGU6IDAgfSk7CiAgYXNzZXJ0LmVxdWFsKHRpbWVycy5hY3RpdmUuc2l6ZSwgMCwgInJ1biBkZWFkbGluZSBtdXN0IGJlIHJlbGVhc2VkIik7CiAgYXNzZXJ0LmVxdWFsKHN0cmVhbS5saXN0ZW5lckNvdW50KCJkYXRhIiksIDApOwogIGFzc2VydC5lcXVhbChzdHJlYW0ubGlzdGVuZXJDb3VudCgiY2xvc2UiKSwgMCk7CiAgYXNzZXJ0LmVxdWFsKHN0cmVhbS5saXN0ZW5lckNvdW50KCJleGl0IiksIDApOwogIGFzc2VydC5lcXVhbChzdHJlYW0ubGlzdGVuZXJDb3VudCgiZW5kIiksIDApOwogIGFzc2VydC5lcXVhbChzdHJlYW0uc3RkZXJyLmxpc3RlbmVyQ291bnQoImRhdGEiKSwgMCk7CiAgLy8gVGhlIGNsaWVudCBhbnN3ZXJlZCB0aGUgZmluaXNoZWQgY29tbWFuZCB3aXRoIGl0cyBvd24gQ0hBTk5FTF9DTE9TRQogIC8vIGluc3RlYWQgb2YgaG9sZGluZyB0aGUgY2hhbm5lbCBvcGVuIHVudGlsIHRoZSBydW4gdGltZW91dC4KICBhc3NlcnQub2soc3RyZWFtLmNsb3NlZCA+IDAgfHwgc3RyZWFtLmRlc3Ryb3llZCA+IDApOwogIGFzc2VydC5kZWVwRXF1YWwoc3RyZWFtLnNpZ25hbHMsIFsiS0lMTCJdKTsKfSk7Cgp0ZXN0KCJib3VuZGVkIFNTSCBleGVjIGRvZXMgbm90IHNldHRsZSBiZWZvcmUgRU9GIHdoZW4gb25seSBleGl0LXN0YXR1cyBhcnJpdmVzIiwgYXN5bmMgKCkgPT4gewogIGNvbnN0IHN0cmVhbSA9IGNyZWF0ZVN0cmVhbSgpOwogIGNvbnN0IHNzaENsaWVudCA9IHsgZXhlYyhfY29tbWFuZCwgbmV4dCkgeyBuZXh0KG51bGwsIHN0cmVhbSk7IH0gfTsKICBjb25zdCByZXN1bHQgPSBleGVjdXRlQm91bmRlZFNzaENvbW1hbmQoc3NoQ2xpZW50LCAiYmFja2dyb3VuZCBjaGlsZCIsIHsKICAgIHJ1blRpbWVvdXRNczogNjBfMDAwLAogIH0pOwoKICAvLyBBIGJhY2tncm91bmRlZCBjaGlsZCBjYW4gc3RpbGwgaG9sZCB0aGUgb3V0cHV0IHBpcGUgYWZ0ZXIgdGhlIHNoZWxsCiAgLy8gcmVwb3J0ZWQgaXRzIGV4aXQgc3RhdHVzOiBjb21wbGV0aW9uIG11c3Qgd2FpdCBmb3IgRU9GIChvciBjbG9zZSkuCiAgc3RyZWFtLmVtaXQoImV4aXQiLCAwKTsKICBhc3NlcnQuZXF1YWwoc3RyZWFtLmxpc3RlbmVyQ291bnQoImNsb3NlIiksIDEsICJtdXN0IHN0YXkgc3Vic2NyaWJlZCB1bnRpbCBFT0YiKTsKICBhc3NlcnQuZXF1YWwoc3RyZWFtLmNsb3NlZCwgMCwgIm11c3Qgbm90IGNsb3NlIHRoZSBjaGFubmVsIGJlZm9yZSBFT0YiKTsKCiAgc3RyZWFtLnN0ZGVyci5lbWl0KCJlbmQiKTsKICBzdHJlYW0uZW1pdCgiZW5kIik7CiAgYXNzZXJ0LmRlZXBFcXVhbChhd2FpdCByZXN1bHQsIHsgc3Rkb3V0OiAiIiwgc3RkZXJyOiAiIiwgY29kZTogMCB9KTsKICBhc3NlcnQub2soc3RyZWFtLmNsb3NlZCA+IDAgfHwgc3RyZWFtLmRlc3Ryb3llZCA+IDApOwp9KTsKCnRlc3QoImJvdW5kZWQgU1NIIGV4ZWMgc3RpbGwgaG9ub3JzIHRoZSBjaGFubmVsIGNsb3NlIHdoZW4gbm8gZXhpdC1zdGF0dXMgaXMgcmVwb3J0ZWQiLCBhc3luYyAoKSA9PiB7CiAgY29uc3Qgc3RyZWFtID0gY3JlYXRlU3RyZWFtKCk7CiAgY29uc3Qgc3NoQ2xpZW50ID0geyBleGVjKF9jb21tYW5kLCBuZXh0KSB7IG5leHQobnVsbCwgc3RyZWFtKTsgfSB9OwogIGNvbnN0IHJlc3VsdCA9IGV4ZWN1dGVCb3VuZGVkU3NoQ29tbWFuZChzc2hDbGllbnQsICJ3ZWlyZCBzZXJ2ZXIiLCB7CiAgICBydW5UaW1lb3V0TXM6IDYwXzAwMCwKICB9KTsKCiAgc3RyZWFtLmVtaXQoImRhdGEiLCBCdWZmZXIuZnJvbSgiZG9uZSIpKTsKICBzdHJlYW0uZW1pdCgiY2xvc2UiLCA3KTsKICBhc3NlcnQuZGVlcEVxdWFsKGF3YWl0IHJlc3VsdCwgeyBzdGRvdXQ6ICJkb25lIiwgc3RkZXJyOiAiIiwgY29kZTogNyB9KTsKfSk7Cgp0ZXN0KCJib3VuZGVkIFNTSCBleGVjIHJlZnVzZXMgY29tbWFuZHMgb3ZlciB0aGUgRHJvcGJlYXIgOTAwMC1ieXRlIGxpbWl0IiwgYXN5bmMgKCkgPT4gewogIGxldCBleGVjQ2FsbHMgPSAwOwogIGNvbnN0IHNzaENsaWVudCA9IHsgZXhlYyhfY29tbWFuZCwgbmV4dCkgeyBleGVjQ2FsbHMgKz0gMTsgbmV4dChudWxsLCBjcmVhdGVTdHJlYW0oKSk7IH0gfTsKICBjb25zdCBiaWcgPSAiZWNobyAiICsgIngiLnJlcGVhdCg5MDAwKTsKICBhd2FpdCBhc3NlcnQucmVqZWN0cygKICAgIGV4ZWN1dGVCb3VuZGVkU3NoQ29tbWFuZChzc2hDbGllbnQsIGJpZywgeyBydW5UaW1lb3V0TXM6IDEwMDAgfSksCiAgICAoZXJyb3IpID0+IGVycm9yLmNvZGUgPT09ICJTU0hfRVhFQ19DT01NQU5EX0xJTUlUIiwKICApOwogIGFzc2VydC5lcXVhbChleGVjQ2FsbHMsIDAsICJvdmVyc2l6ZWQgY29tbWFuZCBtdXN0IG5ldmVyIHJlYWNoIHRoZSBzZXJ2ZXIiKTsKfSk7Cgp0ZXN0KCJib3VuZGVkIFNTSCBleGVjIGFsbG93cyBjb21tYW5kcyBhdCB0aGUgRHJvcGJlYXIgOTAwMC1ieXRlIGxpbWl0IiwgYXN5bmMgKCkgPT4gewogIGNvbnN0IHN0cmVhbSA9IGNyZWF0ZVN0cmVhbSgpOwogIGNvbnN0IHNzaENsaWVudCA9IHsgZXhlYyhfY29tbWFuZCwgbmV4dCkgeyBuZXh0KG51bGwsIHN0cmVhbSk7IH0gfTsKICBjb25zdCBjbWQgPSAiZWNobyAiICsgIngiLnJlcGVhdCg4OTk1KTsgLy8gOTAwMCBieXRlcyB0b3RhbAogIGFzc2VydC5lcXVhbChCdWZmZXIuYnl0ZUxlbmd0aChjbWQsICJ1dGY4IiksIDkwMDApOwogIGNvbnN0IHJlc3VsdCA9IGV4ZWN1dGVCb3VuZGVkU3NoQ29tbWFuZChzc2hDbGllbnQsIGNtZCwgeyBydW5UaW1lb3V0TXM6IDYwXzAwMCB9KTsKICBzdHJlYW0uZW1pdCgiZGF0YSIsIEJ1ZmZlci5mcm9tKCJvayIpKTsKICBzdHJlYW0uZW1pdCgiZXhpdCIsIDApOwogIHN0cmVhbS5lbWl0KCJjbG9zZSIsIDApOwogIGFzc2VydC5kZWVwRXF1YWwoYXdhaXQgcmVzdWx0LCB7IHN0ZG91dDogIm9rIiwgc3RkZXJyOiAiIiwgY29kZTogMCB9KTsKfSk7Cg==
+"use strict";
+
+const test = require("node:test");
+const assert = require("node:assert/strict");
+const { EventEmitter } = require("node:events");
+const {
+  executeBoundedSshCommand,
+  openBoundedSshExecStream,
+} = require("./boundedSshExec.cjs");
+
+function createStream() {
+  const stream = new EventEmitter();
+  stream.stderr = new EventEmitter();
+  stream.closed = 0;
+  stream.destroyed = 0;
+  stream.signals = [];
+  stream.signal = (name) => { stream.signals.push(name); };
+  stream.close = () => { stream.closed += 1; };
+  stream.destroy = () => { stream.destroyed += 1; };
+  return stream;
+}
+
+function trackedTimerApi() {
+  const active = new Set();
+  return {
+    active,
+    setTimeoutFn(callback, delay) {
+      let timer;
+      timer = setTimeout(() => {
+        active.delete(timer);
+        callback();
+      }, delay);
+      active.add(timer);
+      return timer;
+    },
+    clearTimeoutFn(timer) {
+      clearTimeout(timer);
+      active.delete(timer);
+    },
+  };
+}
+
+test("bounded SSH exec times out while opening and terminates a late stream", async () => {
+  let callback;
+  let endCalls = 0;
+  let destroyCalls = 0;
+  const timers = trackedTimerApi();
+  const sshClient = {
+    exec(_command, next) { callback = next; },
+    end() { endCalls += 1; },
+    destroy() { destroyCalls += 1; },
+  };
+  const result = executeBoundedSshCommand(sshClient, "true", {
+    openingTimeoutMs: 5,
+    ...timers,
+  });
+  assert.equal(timers.active.size, 1);
+  assert.equal([...timers.active][0].hasRef(), true);
+  await assert.rejects(result, (error) => error.code === "SSH_EXEC_OPEN_TIMEOUT");
+  assert.equal(timers.active.size, 0);
+  assert.ok(endCalls > 0 || destroyCalls > 0, "open timeout must invalidate the physical transport");
+
+  const stream = createStream();
+  callback(new Error("late open failure"), stream);
+  assert.ok(stream.closed > 0 || stream.destroyed > 0);
+  assert.equal(timers.active.size, 0);
+});
+
+test("best-effort SSH exec open timeout can preserve a shared transport", async () => {
+  let callback;
+  let endCalls = 0;
+  let destroyCalls = 0;
+  const sshClient = {
+    exec(_command, next) { callback = next; },
+    end() { endCalls += 1; },
+    destroy() { destroyCalls += 1; },
+  };
+  await assert.rejects(
+    executeBoundedSshCommand(sshClient, "true", {
+      openingTimeoutMs: 2,
+      invalidateOnOpenTimeout: false,
+    }),
+    (error) => error.code === "SSH_EXEC_OPEN_TIMEOUT",
+  );
+  assert.equal(endCalls, 0);
+  assert.equal(destroyCalls, 0);
+
+  const stream = createStream();
+  callback(null, stream);
+  assert.ok(stream.closed > 0 || stream.destroyed > 0);
+});
+
+test("bounded raw exec stream preserves options and invalidates a hung open", async () => {
+  let callback;
+  let receivedOptions;
+  let invalidations = 0;
+  const timers = trackedTimerApi();
+  const sshClient = {
+    exec(_command, options, next) {
+      receivedOptions = options;
+      callback = next;
+    },
+    destroy() { invalidations += 1; },
+  };
+
+  const pending = openBoundedSshExecStream(
+    sshClient,
+    "sudo sftp-server",
+    { pty: false },
+    { openingTimeoutMs: 2, ...timers },
+  );
+  assert.equal(timers.active.size, 1);
+  assert.equal([...timers.active][0].hasRef(), true);
+  await assert.rejects(pending, (error) => error.code === "SSH_EXEC_OPEN_TIMEOUT");
+  assert.deepEqual(receivedOptions, { pty: false });
+  assert.equal(invalidations, 1);
+  assert.equal(timers.active.size, 0);
+
+  const lateStream = createStream();
+  callback(null, lateStream);
+  assert.ok(lateStream.closed > 0 || lateStream.destroyed > 0);
+  assert.equal(timers.active.size, 0);
+});
+
+test("bounded SSH exec times out a live command and removes data listeners", async () => {
+  const stream = createStream();
+  const timers = trackedTimerApi();
+  const sshClient = { exec(_command, next) { next(null, stream); } };
+  const result = executeBoundedSshCommand(sshClient, "sleep", {
+    runTimeoutMs: 5,
+    ...timers,
+  });
+  assert.equal(timers.active.size, 1);
+  assert.equal([...timers.active][0].hasRef(), true);
+  await assert.rejects(
+    result,
+    (error) => error.code === "SSH_EXEC_RUN_TIMEOUT",
+  );
+  assert.equal(timers.active.size, 0);
+  assert.equal(stream.listenerCount("data"), 0);
+  assert.equal(stream.stderr.listenerCount("data"), 0);
+  assert.ok(stream.closed > 0 || stream.destroyed > 0);
+  // Best-effort remote kill: servers that answer "signal" channel requests
+  // stop the abandoned command instead of leaving it running (#3187).
+  assert.deepEqual(stream.signals, ["KILL"]);
+});
+
+test("bounded SSH exec caps combined stdout and stderr and terminates the stream", async () => {
+  const stream = createStream();
+  const sshClient = { exec(_command, next) { next(null, stream); } };
+  const result = executeBoundedSshCommand(sshClient, "flood", { maxOutputBytes: 16 });
+  stream.emit("data", Buffer.alloc(10, 97));
+  stream.stderr.emit("data", Buffer.alloc(10, 98));
+  await assert.rejects(result, (error) => error.code === "SSH_EXEC_OUTPUT_LIMIT");
+  assert.equal(stream.listenerCount("data"), 0);
+  assert.equal(stream.stderr.listenerCount("data"), 0);
+  assert.ok(stream.closed > 0 || stream.destroyed > 0);
+});
+
+test("bounded SSH exec settles on stdout and stderr stream errors", async () => {
+  for (const target of ["stdout", "stderr"]) {
+    const stream = createStream();
+    const sshClient = { exec(_command, next) { next(null, stream); } };
+    const result = executeBoundedSshCommand(sshClient, "fail");
+    const expected = new Error(`${target} failed`);
+    if (target === "stdout") stream.emit("error", expected);
+    else stream.stderr.emit("error", expected);
+    await assert.rejects(result, /failed/);
+    assert.equal(stream.listenerCount("data"), 0);
+    assert.equal(stream.stderr.listenerCount("data"), 0);
+  }
+});
+
+test("bounded SSH exec aborts before callback and terminates a late stream", async () => {
+  let callback;
+  let invalidations = 0;
+  const timers = trackedTimerApi();
+  const controller = new AbortController();
+  const sshClient = {
+    exec(_command, next) { callback = next; },
+    destroy() { invalidations += 1; },
+  };
+  const result = executeBoundedSshCommand(sshClient, "pending", {
+    signal: controller.signal,
+    ...timers,
+  });
+  assert.equal(timers.active.size, 1);
+  assert.equal([...timers.active][0].hasRef(), true);
+  controller.abort(new Error("cancelled"));
+  await assert.rejects(result, /cancelled/);
+  assert.equal(invalidations, 1);
+  assert.equal(timers.active.size, 0);
+
+  const stream = createStream();
+  callback(null, stream);
+  assert.ok(stream.closed > 0 || stream.destroyed > 0);
+  assert.equal(timers.active.size, 0);
+});
+
+test("bounded SSH exec can abort a shared-channel probe without invalidating the transport", async () => {
+  let invalidations = 0;
+  const controller = new AbortController();
+  const sshClient = {
+    exec() {},
+    destroy() { invalidations += 1; },
+  };
+  const result = executeBoundedSshCommand(sshClient, "probe", {
+    signal: controller.signal,
+    invalidateTransportOnAbort: false,
+  });
+
+  controller.abort(new Error("cancelled"));
+  await assert.rejects(result, /cancelled/);
+  assert.equal(invalidations, 0);
+});
+
+test("bounded SSH exec clears its run deadline after normal completion", async () => {
+  const stream = createStream();
+  const timers = trackedTimerApi();
+  const sshClient = { exec(_command, next) { next(null, stream); } };
+  const result = executeBoundedSshCommand(sshClient, "true", {
+    runTimeoutMs: 1_000,
+    ...timers,
+  });
+
+  assert.equal(timers.active.size, 1);
+  assert.equal([...timers.active][0].hasRef(), true);
+  stream.emit("close", 0);
+  assert.deepEqual(await result, { stdout: "", stderr: "", code: 0 });
+  assert.equal(timers.active.size, 0);
+});
+
+test("repeated unresponsive exec opens release channel callbacks and evict the shared transport", async () => {
+  const {
+    borrowTransport,
+    createTransport,
+    findTransportByEndpoint,
+    getTransportStats,
+    resetSshTransportRegistryForTests,
+  } = require("./sshConnectionPool.cjs");
+  resetSshTransportRegistryForTests({ defaultIdleTtlMs: 0 });
+  const endpoint = { hostId: "host-1", hostname: "wedged.example", username: "root" };
+  const conn = new EventEmitter();
+  conn._sock = { destroyed: false };
+  conn.pendingChannelCallbacks = [];
+  conn.exec = (_command, callback) => {
+    if (conn._sock.destroyed) throw new Error("Not connected");
+    conn.pendingChannelCallbacks.push(callback);
+  };
+  conn.end = () => {};
+  conn.destroy = () => {
+    if (conn._sock.destroyed) return;
+    conn._sock.destroyed = true;
+    conn.pendingChannelCallbacks.length = 0;
+    conn.emit("close");
+  };
+  const transport = createTransport({ conn, endpoint });
+  borrowTransport(transport, { kind: "shell", holder: {} });
+
+  for (let attempt = 0; attempt < 3; attempt += 1) {
+    await assert.rejects(
+      executeBoundedSshCommand(conn, "stats", { openingTimeoutMs: 2 }),
+      /timed out|Not connected/,
+    );
+  }
+
+  assert.equal(conn.pendingChannelCallbacks.length, 0);
+  assert.equal(getTransportStats().transports, 0);
+  assert.equal(findTransportByEndpoint(endpoint), null);
+
+  const replacement = new EventEmitter();
+  replacement._sock = { destroyed: false };
+  replacement.end = () => {};
+  const replacementTransport = createTransport({ conn: replacement, endpoint });
+  assert.equal(findTransportByEndpoint(endpoint), replacementTransport, "a fresh reconnect must be reusable");
+  resetSshTransportRegistryForTests({ defaultIdleTtlMs: 0 });
+});
+
+test("bounded SSH exec preserves UTF-8 split across stream chunks", async () => {
+  const stream = createStream();
+  const sshClient = { exec(_command, next) { next(null, stream); } };
+  const result = executeBoundedSshCommand(sshClient, "printf unicode");
+  const bytes = Buffer.from("你🙂", "utf8");
+  stream.emit("data", bytes.subarray(0, 2));
+  stream.emit("data", bytes.subarray(2, 5));
+  stream.emit("data", bytes.subarray(5));
+  stream.emit("close", 0);
+
+  assert.deepEqual(await result, { stdout: "你🙂", stderr: "", code: 0 });
+});
+
+test("bounded SSH exec settles on exit-status plus EOF and closes the channel itself", async () => {
+  const stream = createStream();
+  const timers = trackedTimerApi();
+  const sshClient = { exec(_command, next) { next(null, stream); } };
+  const result = executeBoundedSshCommand(sshClient, "relay exec", {
+    runTimeoutMs: 60_000,
+    ...timers,
+  });
+
+  // Relay-style server: output, exit-status and EOF, but the channel-close
+  // never comes — the client must hang up on its own (#3459).
+  stream.emit("data", Buffer.from("out\n"));
+  stream.stderr.emit("data", Buffer.from("err\n"));
+  stream.stderr.emit("end");
+  stream.emit("exit", 0);
+  stream.emit("end");
+
+  assert.deepEqual(await result, { stdout: "out\n", stderr: "err\n", code: 0 });
+  assert.equal(timers.active.size, 0, "run deadline must be released");
+  assert.equal(stream.listenerCount("data"), 0);
+  assert.equal(stream.listenerCount("close"), 0);
+  assert.equal(stream.listenerCount("exit"), 0);
+  assert.equal(stream.listenerCount("end"), 0);
+  assert.equal(stream.stderr.listenerCount("data"), 0);
+  // The client answered the finished command with its own CHANNEL_CLOSE
+  // instead of holding the channel open until the run timeout.
+  assert.ok(stream.closed > 0 || stream.destroyed > 0);
+  assert.deepEqual(stream.signals, ["KILL"]);
+});
+
+test("bounded SSH exec does not settle before EOF when only exit-status arrives", async () => {
+  const stream = createStream();
+  const sshClient = { exec(_command, next) { next(null, stream); } };
+  const result = executeBoundedSshCommand(sshClient, "background child", {
+    runTimeoutMs: 60_000,
+  });
+
+  // A backgrounded child can still hold the output pipe after the shell
+  // reported its exit status: completion must wait for EOF (or close).
+  stream.emit("exit", 0);
+  assert.equal(stream.listenerCount("close"), 1, "must stay subscribed until EOF");
+  assert.equal(stream.closed, 0, "must not close the channel before EOF");
+
+  stream.stderr.emit("end");
+  stream.emit("end");
+  assert.deepEqual(await result, { stdout: "", stderr: "", code: 0 });
+  assert.ok(stream.closed > 0 || stream.destroyed > 0);
+});
+
+test("bounded SSH exec still honors the channel close when no exit-status is reported", async () => {
+  const stream = createStream();
+  const sshClient = { exec(_command, next) { next(null, stream); } };
+  const result = executeBoundedSshCommand(sshClient, "weird server", {
+    runTimeoutMs: 60_000,
+  });
+
+  stream.emit("data", Buffer.from("done"));
+  stream.emit("close", 7);
+  assert.deepEqual(await result, { stdout: "done", stderr: "", code: 7 });
+});
+
+test("bounded SSH exec refuses commands over the Dropbear 9000-byte limit", async () => {
+  let execCalls = 0;
+  const sshClient = { exec(_command, next) { execCalls += 1; next(null, createStream()); } };
+  const big = "echo " + "x".repeat(9000);
+  await assert.rejects(
+    executeBoundedSshCommand(sshClient, big, { runTimeoutMs: 1000 }),
+    (error) => error.code === "SSH_EXEC_COMMAND_LIMIT",
+  );
+  assert.equal(execCalls, 0, "oversized command must never reach the server");
+});
+
+test("bounded SSH exec allows commands at the Dropbear 9000-byte limit", async () => {
+  const stream = createStream();
+  const sshClient = { exec(_command, next) { next(null, stream); } };
+  const cmd = "echo " + "x".repeat(8995); // 9000 bytes total
+  assert.equal(Buffer.byteLength(cmd, "utf8"), 9000);
+  const result = executeBoundedSshCommand(sshClient, cmd, { runTimeoutMs: 60_000 });
+  stream.emit("data", Buffer.from("ok"));
+  stream.emit("exit", 0);
+  stream.emit("close", 0);
+  assert.deepEqual(await result, { stdout: "ok", stderr: "", code: 0 });
+});
