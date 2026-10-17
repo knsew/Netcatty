@@ -32,7 +32,10 @@ function validateReleaseTag(tag) {
 }
 
 function parseRepository(env) {
-  const owner = env.ET_BIN_OWNER || (env.GITHUB_REPOSITORY || "").split("/")[0] || "binaricat";
+  // Default to the upstream binary repo, mirroring resolve-mosh-bin-release.cjs:
+  // forks do not have their own <owner>/Netcatty-et-bin, so falling back to the
+  // fork owner would fail the tag build (the et-client binaries are bundled).
+  const owner = env.ET_BIN_OWNER || "binaricat";
   const repo = env.ET_BIN_REPO || "Netcatty-et-bin";
   return { owner, repo };
 }
