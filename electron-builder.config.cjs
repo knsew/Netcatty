@@ -263,7 +263,8 @@ module.exports = {
         // Windows, install to Program Files (x86), and leave Netcatty.exe
         // missing (#2570). Keep official releases on pack:win-x64 until win32
         // arm64 bundled mosh/et + native rebuilds are ready.
-        target: ['nsis', 'portable', 'zip'],
+        // Fork: zip only (per user request 2026-10-19; nsis/portable removed)
+        target: ['zip'],
         extraResources: [
             ...moshExtraResources('win32'),
             ...etExtraResources('win32'),
