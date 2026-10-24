@@ -815,28 +815,9 @@ jobs:
       - name: List artifacts
         run: ls -la artifacts/
 
-      # Fork: Windows-only release — only the Windows update metadata exists.
-      - name: Verify update metadata files
-        run: |
-          if [ ! -f "artifacts/latest.yml" ]; then
-            echo "::warning::Missing latest.yml in merged artifacts, attempting recovery..."
-            tmpdir="/tmp/artifact-netcatty-windows"
-            gh run download ${{ github.run_id }} --name "netcatty-windows" --dir "${tmpdir}" 2>/dev/null || true
-            if [ -d "${tmpdir}" ]; then
-              for yml in "${tmpdir}"/latest*.yml; do
-                [ -f "$yml" ] && cp -v "$yml" artifacts/
-              done
-            fi
-          fi
-          if [ ! -f "artifacts/latest.yml" ]; then
-            echo "::error::latest.yml is still missing after recovery attempt"
-            exit 1
-          fi
-          echo "All update metadata files present."
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-
+      # Fork: zip-only release — zip targets produce no update metadata
+      # (latest.yml is only emitted for nsis/portable), so the upstream
+      # verification step is dropped rather than failing every release.
 
       - name: Generate Release Body
         run: node .github/scripts/generate-release-note.js
