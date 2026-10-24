@@ -26,6 +26,11 @@ function rejectOversizedSshCommand(command) {
   return error;
 }
 
+// A best-effort probe may abandon an open without disconnecting other leases.
+// ssh2 cannot cancel that open. Fence further execs until its callback arrives,
+// bounding retained requests even when a panel keeps polling a stalled server.
+const abandonedExecOpens = new WeakMap();
+
 function terminateSshExecStream(stream) {
   if (!stream) return;
   // Teardown can race with a final transport error after normal listeners have
@@ -133,6 +138,11 @@ function executeBoundedSshCommand(sshClient, command, options = {}) {
   }
   const oversized = rejectOversizedSshCommand(command);
   if (oversized) return Promise.reject(oversized);
+  if (abandonedExecOpens.get(sshClient)?.size) {
+    const error = new Error("SSH exec channel open still pending on this connection");
+    error.code = "SSH_EXEC_OPEN_PENDING";
+    return Promise.reject(error);
+  }
   const signal = options.signal || null;
   const setTimeoutFn = options.setTimeoutFn || setTimeout;
   const clearTimeoutFn = options.clearTimeoutFn || clearTimeout;
@@ -153,6 +163,19 @@ function executeBoundedSshCommand(sshClient, command, options = {}) {
     const stderrDecoder = new StringDecoder("utf8");
     let decodersEnded = false;
     let cleanupStreamListeners = () => {};
+    const openToken = {};
+    let invoked = false;
+    const abandonOpen = () => {
+      if (!invoked || streamRef || settled) return;
+      let pending = abandonedExecOpens.get(sshClient);
+      if (!pending) abandonedExecOpens.set(sshClient, pending = new Set());
+      pending.add(openToken);
+    };
+    const releaseAbandonedOpen = () => {
+      const pending = abandonedExecOpens.get(sshClient);
+      pending?.delete(openToken);
+      if (pending?.size === 0) abandonedExecOpens.delete(sshClient);
+    };
 
     const cleanup = () => {
       if (openingTimer) clearTimeoutFn(openingTimer);
@@ -180,12 +203,15 @@ function executeBoundedSshCommand(sshClient, command, options = {}) {
       }
       return true;
     };
-    const onAbort = () => finish(createAbortError(signal), null, {
-      terminate: true,
-      // Before the callback arrives ssh2 owns an uncancellable channel-open
-      // request. Closing the physical transport is the only public cleanup.
-      invalidateTransport: !streamRef && options.invalidateTransportOnAbort !== false,
-    });
+    const onAbort = () => {
+      if (options.invalidateTransportOnAbort === false) abandonOpen();
+      return finish(createAbortError(signal), null, {
+        terminate: true,
+        // Before the callback arrives ssh2 owns an uncancellable channel-open
+        // request. Preserve-and-fence callers wait for late callback cleanup.
+        invalidateTransport: !streamRef && options.invalidateTransportOnAbort !== false,
+      });
+    };
     const append = (target, chunk) => {
       if (settled) return;
       const buffer = Buffer.isBuffer(chunk) ? chunk : Buffer.from(String(chunk));
@@ -211,11 +237,14 @@ function executeBoundedSshCommand(sshClient, command, options = {}) {
     openingTimer = setTimeoutFn(() => {
       const error = new Error(`SSH exec channel open timed out after ${openingTimeoutMs} ms`);
       error.code = "SSH_EXEC_OPEN_TIMEOUT";
+      if (!invalidateOnOpenTimeout) abandonOpen();
       finish(error, null, { terminate: true, invalidateTransport: invalidateOnOpenTimeout });
     }, openingTimeoutMs);
 
     try {
+      invoked = true;
       sshClient.exec(command, (error, stream) => {
+        releaseAbandonedOpen();
         if (openingTimer) clearTimeoutFn(openingTimer);
         openingTimer = null;
         if (settled) {
